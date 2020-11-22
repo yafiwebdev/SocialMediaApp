@@ -81,7 +81,7 @@ const Feed: React.FC<any> = () => {
         className="btn btn-info">
         Test API
       </a>
-      {posts}
+      {posts.length > 0 ? posts : null}
     </>
   );
 };
