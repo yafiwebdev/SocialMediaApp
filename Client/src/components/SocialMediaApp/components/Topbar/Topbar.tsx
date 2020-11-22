@@ -2,16 +2,6 @@ import * as React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 
-interface IUserData {
-  username: string;
-  email: string;
-}
-
-const userData: IUserData = {
-  username: 'JDoe',
-  email: 'jdoe@mail.com',
-};
-
 const Topbar: React.FC<any> = () => {
   return (
     <Navbar
