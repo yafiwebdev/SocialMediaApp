@@ -9,7 +9,7 @@ const Topbar: React.FC<any> = () => {
       bg="dark"
       variant="dark"
       className="justify-content-between mb-4">
-      <Navbar.Brand>
+      <Navbar.Brand as="span">
         <Link to="/" className="text-white text-decoration-none">
           Social-Media-App
         </Link>
@@ -17,7 +17,7 @@ const Topbar: React.FC<any> = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       {/* <Navbar.Collapse id="responsive-navbar-nav"> */}
       <Nav>
-        <Nav.Link>
+        <Nav.Link as="span">
           <NavLink
             to="/login"
             className="text-white text-decoration-none"
@@ -25,7 +25,7 @@ const Topbar: React.FC<any> = () => {
             Login
           </NavLink>
         </Nav.Link>
-        <Nav.Link>
+        <Nav.Link as="span">
           <NavLink
             to="/signup"
             className="text-white text-decoration-none"

@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { QueryCache, ReactQueryCacheProvider } from 'react-query';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { SocialMediaApp } from './components/SocialMediaApp';
 import reportWebVitals from './reportWebVitals';
 
+const queryCache = new QueryCache();
+
 ReactDOM.render(
   <React.StrictMode>
-    <SocialMediaApp />
+    <ReactQueryCacheProvider queryCache={queryCache}>
+      <SocialMediaApp />
+    </ReactQueryCacheProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

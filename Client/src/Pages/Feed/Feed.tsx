@@ -1,31 +1,9 @@
 import * as React from 'react';
 
 import { Topbar, Post } from '../../components/SocialMediaApp/components';
+import { IUserFeed } from '../../types';
 
-interface IComments {
-  commenter: string;
-  comment: string;
-}
-
-interface IPost {
-  username: string;
-  url: string;
-  caption: string;
-  interactions: [
-    {
-      likes: Array<string>;
-      comments: Array<IComments>;
-    }
-  ];
-}
-
-interface IUser {
-  username: string;
-  email: string;
-  post: Array<IPost>;
-}
-
-const user: IUser = {
+const user: IUserFeed = {
   username: 'John Doe',
   email: 'jDoe@mail.com',
   post: [
@@ -74,13 +52,6 @@ const Feed: React.FC<any> = () => {
   return (
     <>
       <Topbar />
-      <a
-        href="http://localhost:8000/test"
-        target="_blank"
-        rel="noreferrer"
-        className="btn btn-info">
-        Test API
-      </a>
       {posts.length > 0 ? posts : null}
     </>
   );
