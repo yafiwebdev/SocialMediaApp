@@ -12,7 +12,6 @@ import {
   THandleSubmit,
 } from '../../../types';
 import { notEmpty, isValidEmail, isFormValid } from '../../../utils';
-import { Topbar } from '../../../components/SocialMediaApp/components';
 
 const Signup: React.FC<any> = () => {
   const user: IUser = {
@@ -163,7 +162,6 @@ const Signup: React.FC<any> = () => {
 
   return (
     <>
-      <Topbar />
       <Container>
         <Row className="justify-content-center align-items-center custom-height">
           <Card>

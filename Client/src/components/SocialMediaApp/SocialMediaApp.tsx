@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Login, Signup } from '../../Pages/Auth';
 import { Feed } from '../../Pages';
+import { Topbar } from './components';
 
 const SocialMediaApp = () => {
   return (
     <Router>
+      <Topbar />
       <Switch>
         <Route exact path="/">
           <Feed />

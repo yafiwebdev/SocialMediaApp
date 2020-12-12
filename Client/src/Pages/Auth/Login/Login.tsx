@@ -4,7 +4,6 @@ import { useMutation } from 'react-query';
 import { useHistory } from 'react-router-dom';
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 
-import { Topbar } from '../../../components/SocialMediaApp/components';
 import {
   FieldName,
   TChangeHandler,
@@ -100,7 +99,6 @@ const Login: React.FC<any> = () => {
 
   return (
     <>
-      <Topbar />
       <Container>
         <Row className="justify-content-center align-items-center custom-height">
           <Card>
@@ -120,6 +118,7 @@ const Login: React.FC<any> = () => {
                           name={FieldName.USERNAME}
                           onChange={validateField}
                           isInvalid={!!errorMessage[FieldName.USERNAME]}
+                          autoFocus
                           required
                         />
                         <Form.Control.Feedback type="invalid">

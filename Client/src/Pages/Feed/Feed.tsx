@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Topbar, Post } from '../../components/SocialMediaApp/components';
+import { Post } from '../../components/SocialMediaApp/components';
 import { IUserFeed } from '../../types';
 
 const user: IUserFeed = {
@@ -49,12 +49,7 @@ const Feed: React.FC<any> = () => {
     <Post key={idx} user={userPost} />
   ));
 
-  return (
-    <>
-      <Topbar />
-      {posts.length > 0 ? posts : null}
-    </>
-  );
+  return <>{posts.length > 0 ? posts : null}</>;
 };
 
 export default Feed;
